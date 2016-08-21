@@ -1,0 +1,70 @@
+extends layout
+block css
+
+block scripts
+
+block header
+  h1= user.displayName
+
+block content
+  form(id="saveProfile" method="POST" action="/save")
+    table
+      tr
+        td Ф.И.О.:
+        td
+          span= user.givenName
+          span &nbsp
+          span= user.sn
+      tr
+        td Таб. №:
+        td= user.employeeID
+      tr
+        td Подразделение:
+        td= user.department
+      tr
+        td Должность:
+        td= user.title
+      tr
+        td Электронная почта:
+        td= user.mail
+      if (user.delivery&&user.delivery.available)
+        tr(title="Рассылка для молодых специалистов")
+          td Рассылка: &#x2753
+          td
+            select(name="delivery")
+              option(value="true") да
+              option(value="false") нет
+      tr
+        td Заводской телефон:
+        td
+          - var tel = user.telephoneNumber||""
+          input(form="saveProfile" name="tel" value=tel maxlength=16 size=16 autofocus)
+      tr
+        td Расположение:
+        td
+          span &nbspплощадка:&nbsp
+          select(form="saveProfile" name="area" size=1)
+            each pl in areas
+              if (location.area == pl)
+                option(selected)= pl
+              else
+                option= pl
+
+          span &nbspкорпус:&nbsp
+          input(form="saveProfile" name="building" value=location.building maxlength=6 size=6)
+
+          span &nbspэтаж:&nbsp
+          input(form="saveProfile" name="floor"    value=location.floor maxlength=6 size=6)
+
+          span &nbspпомещение:&nbsp
+          input(form="saveProfile" name="room"     value=location.room maxlength=55 size=10)
+
+    input(id="save" form="saveProfile", type="submit", value="Сохранить информацию")
+    input(id="reset" form="saveProfile", type="reset", value="Отменить изменения")
+    if (warn)
+      div#warning Для корректной работы необходимо использовать браузер Google Chrome
+    else
+      a(href="/")
+        button(id="close" type="button") Закрыть
+block footer
+  span тел. 12-34

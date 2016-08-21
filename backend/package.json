@@ -1,0 +1,13 @@
+{
+  "name": "Domain profiles updater",
+  "version": "0.1.0",
+  "description": "Обновляет профиль пользователя в домене при поступлении запроса по https",
+  "main": "app.js",
+  "dependencies": {
+    "activedirectory": "^0.7.2",
+    "async": "^2.0.1"
+  },
+  "devDependencies": {},
+  "author": "Casm",
+  "license": "GPL v3"
+}

@@ -1,0 +1,44 @@
+{
+  "httpPort":   80,
+  "httpsPort":  443,
+  "bindIP":     "172.16.20.16",
+  "worker": {
+    "family":    4,
+    "port":      5678,
+    "method":    "POST",
+    "host":      "appserv.company.ru",
+    "auth":      "profileWorker:xxxxxx",
+    "rejectUnauthorized": false,
+    "headers": {
+      "Content-Type": "application/x-www-form-urlencoded"
+    }
+  },
+  "domain":   "company.ru",
+  "authLog":  "/var/log/webApps/profile_auth.log",
+  "dsmodLog": "/var/log/webApps/profile_dsmod.log",
+  "areas":    ["основная", "вторая"],
+  "ldapConfig": {
+    "url": "ldap://172.16.1.12",
+    "baseDN": "OU=Пользователи,DC=company,DC=ru",
+    "username": "support@company.ru",
+    "password": "xxxxxxx",
+    "attributes": {
+        "user": [
+          "distinguishedName",
+          "displayName",
+          "givenName",
+          "sn",
+          "cn",
+          "company",
+          "department",
+          "title",
+          "mail",
+          "telephoneNumber",
+          "userAccountControl",
+          "employeeID",
+          "physicalDeliveryOfficeName"
+        ]
+      }
+  },
+  "mongoConnection": "mongodb://profilesUser:xxxxxxxxxxx@127.0.0.1:27017/domainProfiles"
+}

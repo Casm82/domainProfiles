@@ -1,0 +1,53 @@
+extends layout
+block css
+
+block scripts
+
+block header
+  h1= user.displayName
+
+block content
+  table
+    tr
+      td Ф.И.О.:
+      td
+        span= user.givenName
+        span &nbsp
+        span= user.sn
+    tr
+      td Таб. №:
+      td= user.employeeID
+    tr
+      td Подразделение:
+      td= user.department
+    tr
+      td Должность:
+      td= user.title
+    tr
+      td Электронная почта:
+      td= user.mail
+    if (user.delivery&&user.delivery.available)
+      tr(title="Рассылка для молодых специалистов")
+        td Рассылка: &#x2753
+        td= user.delivery.enabled?"да":"нет"
+    tr
+      td Телефон:
+      td= user.telephoneNumber
+    tr
+      td Расположение:
+      td= user.physicalDeliveryOfficeName
+
+  if (warn)
+    div#manage
+      div
+        a(href="/edit") Редактировать информацию
+    div#warning Для корректной работы необходимо использовать браузер Google Chrome
+  else
+    div#manage
+      a(href="/edit")
+        button Редактировать информацию
+      if (authType == "ldap")
+        a(href="/logout")
+          button Завершить сеанс
+block footer
+  span тел. 12-34

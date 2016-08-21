@@ -1,0 +1,2 @@
+ ktpass ﻿/princ username@MYDOMAIN.COM /pass password /ptype KRB5_NT_PRINCIPAL /out kerberos.keytab
+ https://technet.microsoft.com/ru-ru/library/cc753771(v=ws.10).aspx

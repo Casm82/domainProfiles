@@ -1,0 +1,21 @@
+{
+  "name": "Edit domain profiles",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Edit user profiles in Active Directory",
+  "main": "app.js",
+  "author": "Casm",
+  "license": "GPL v2",
+  "dependencies": {
+    "activedirectory": "^0.7.2",
+    "async": "^2.0.1",
+    "connect-mongodb-session": "^0.1.1",
+    "express": "^4.14.0",
+    "express-middlewares": "^0.1.1",
+    "express-session": "^1.14.0",
+    "pug": "^2.0.0-beta5",
+    "mongoose": "^4.5.9",
+    "passport": "^0.3.2",
+    "passport-negotiate": "^0.1.4"
+  }
+}

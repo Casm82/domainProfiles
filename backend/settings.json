@@ -1,0 +1,13 @@
+{
+  "ipbind":     "192.168.1.1",
+  "port":       5678,
+  "user":       "profileWorker",
+  "password":   "xxxxxx",
+  "ldapConfig": {
+    "url":      "ldap://172.16.1.12",
+    "baseDN":   "DC=company,DC=ru",
+    "username": "support@company.ru",
+    "password": "xxxxx"
+    },
+  "dsmodLog":   "C:\\webApps\\profilesWorker\\logs\\dsMod.log"
+}

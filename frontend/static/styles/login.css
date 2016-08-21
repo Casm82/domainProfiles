@@ -1,0 +1,28 @@
+#login,#errorMsg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#login {
+  margin-top: -12em;
+  margin-left: -9em;
+}
+
+#errorMsg {
+  width: 40em;
+  margin-top: -4em;
+  margin-left: -20em;
+  text-align: center;
+}
+
+form div { margin: 0.5em 0; }
+
+#errorMsg p {margin: 0.5em;}
+
+#loginMsg {
+  color: red;
+  position: relative;
+  left: -2em;
+  display: none;
+}

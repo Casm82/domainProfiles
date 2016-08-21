@@ -1,0 +1,67 @@
+body {
+  font: normal 16px/18px tahoma, sans;
+}
+
+header div, header input {font-size: 14px;}
+
+input, button, select {
+  margin: 0 0.25em;
+  border: 2px solid lightgrey;
+}
+
+input:hover, button:hover, select:hover {
+  background-color: white;
+}
+
+h1 { font-size: 1.1em;}
+
+h2 { font-size: 1.0em;}
+
+#manage { margin: 0.5em 0; }
+
+#manage div {
+  margin: 0.5em 0;
+  border: 2px solid grey;
+  display: inline;
+  background-color: lightgrey;
+}
+
+#manage div:hover {
+  background-color: white;
+}
+
+#manage a {
+  margin: 0.1em;
+  text-decoration: none;
+  color: black;
+}
+
+input#save:hover {
+  background-color: red;
+}
+
+input#reset:hover {
+  background-color: yellow;
+}
+
+button#close:hover {
+  background-color: lightgreen;
+}
+
+footer {
+  margin: 1em 0;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  font-size: 0.75em;
+}
+
+form select, form input, form button{
+  margin: 0.25em;
+}
+
+#warning {
+  margin: 0.5em 0;
+  color: red;
+}
+

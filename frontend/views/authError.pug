@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/styles/layout.css")
+    link(rel="stylesheet", href="/styles/login.css")
+  body
+    if (code==401)
+      div#errorMsg
+        p Вы не авторизованы&nbsp
+        p
+         a(href="/")
+            button Выполните вход
+    if (code==402)
+      div#errorMsg 
+        p Неверный пароль для пользователя&nbsp
+          strong= username
+          | .
+        p
+          a(href="/")
+            button Повторить ввод пароля
